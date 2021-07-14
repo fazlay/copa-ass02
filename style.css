@@ -7,32 +7,18 @@ p {
 main {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
 }
-
+/* ------------------------------------------- */
 /* Top Bannaer Styles */
+/* ------------------------------------------- */
 
 .top-banner {
   background-color: #2d25a0;
   color: #fff;
-  /* height: 677px; */
-  /* margin: 0; */
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 130px 160px;
-}
-
-.right-area img {
-  /* animation */
-  filter: grayscale();
-  transition: filter 0.4s ease-in-out;
-}
-
-.top-banner:hover .right-area img {
-  filter: none;
-  cursor: pointer;
 }
 
 .left-area h1 {
@@ -45,7 +31,7 @@ main {
 
 .left-area a {
   text-decoration: none;
-  background-color: #e02c6d;
+  background-color: #350b1a;
   padding: 10px 15px;
   color: #fff;
   font-weight: 500;
@@ -55,19 +41,32 @@ main {
 .right-area img {
   height: 438px;
 }
-/*  player details --------------------------------------8*/
+
+/* ------------------------------------------- */
+/* Animation */
+.right-area img {
+  filter: grayscale();
+  transition: filter 0.4s ease-in-out;
+}
+
+.top-banner:hover .right-area img {
+  filter: none;
+  cursor: pointer;
+}
+.top-banner:hover .left-area a {
+  background-color: #e02c6d;
+  transition: background-color 0.4s ease-in-out;
+}
+/*  ------- player details --------------------------------------8*/
 /* --------------------------------------------------- */
-.container {
+.player-container {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   margin-top: 70px;
-  margin-bottom: 150px;
+  margin-bottom: 80px;
 }
 .players-profile {
   width: 1050px;
-  /* margin-top: 70px;
-    margin-bottom: 150px; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
@@ -95,18 +94,15 @@ main {
 
 .player img {
   width: 100%;
-  /* height: 256px;
-    width: 300px; */
 }
-/* -------------------
-Bonus Section
- ------------------------- */
+/* ------------- */
+/* Bonus Section------------------------- */
 .phot-container {
   margin: 3% 24%;
 }
 .phot-container h2 {
- display: flex;
- justify-content: center;
+  display: flex;
+  justify-content: center;
   font-size: 36px;
   font-weight: 500;
 }
@@ -122,7 +118,7 @@ Bonus Section
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
   max-width: 100%;
 }
-
+/* ---------------------------------------------------------- */
 /* Next match ---------------------------------------------- */
 
 .time-container {
@@ -161,10 +157,8 @@ Bonus Section
   font-size: 15px;
   font-weight: 500;
 }
-
-/* footer 
-
-#0B0D17  inside  #969BAB  */
+/* ------------------------------------------------------- */
+/* footer ----------------------------------------------- */
 
 .logo {
   display: flex;
@@ -194,12 +188,15 @@ Bonus Section
   justify-content: center;
   margin-bottom: 60px;
 }
-/* media query  -----foripad ---------------------------*/
+/* ------------------------------------------------------ */
+/* media query  -----for ipad ---------------------------*/
 @media only screen and (min-width: 689px) and (max-width: 992px) {
   .top-banner {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    padding: 130px 160px;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    padding-left: 70px;
     grid-row-gap: 60px;
   }
   .players-profile {
@@ -210,8 +207,9 @@ Bonus Section
     justify-content: center;
   }
 }
-
+/* --------------------------------------------------------- */
 /* media query  -----form Mobile ---------------------------*/
+
 @media only screen and (max-width: 688px) {
   .left-area h1 {
     font-size: 36px;
@@ -224,8 +222,9 @@ Bonus Section
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-row-gap: 20px;
-    padding: 130px 160px;
-    padding: 10px 10px;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    padding-left: 20px;
   }
   .players-profile {
     color: blue;
@@ -233,5 +232,45 @@ Bonus Section
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
     justify-items: center;
+  }
+  .logo img {
+    height: 63px;
+  }
+
+  .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #969bab;
+    background-color: rgba(11, 13, 23, 0.137);
+    margin: 8px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+  }
+  /* Counter Media Query */
+
+  .time-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+  .timer {
+    padding: 5px;
+  }
+
+  .single-digit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000000;
+    color: #ffffff;
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: 700;
   }
 }
